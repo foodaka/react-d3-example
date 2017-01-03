@@ -1,0 +1,16 @@
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.lineOrders {
+    fill: none;
+    /*shape-rendering: crispEdges;*/
+    stroke: red;
+    stroke-width: 2px;
+}
