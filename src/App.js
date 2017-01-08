@@ -7,7 +7,6 @@ import styles from './App.css'
 import classNames from 'classnames/bind';
 let cx = classNames.bind(styles);
 
-console.log('cx',cx)
 class d3Chart extends React.Component{
     constructor(props){
         super(props)
