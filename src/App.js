@@ -46,62 +46,62 @@ class d3Chart extends React.Component{
 
             x.domain(d3.extent(data, function(d) {return d.week; }));
             y.domain(d3.extent(data, function(d) { return d.users; }));
-                // // add the X gridlines
-                g.append("g")
-                  .attr("class", `grid`)
-                  .attr("transform", "translate(0," + height + ")")
-                  .call(make_x_grid_lines()
-                      .tickSize(-height)
-                      .tickFormat(""))
-                //   // add the Y gridlines
-                g.append("g")
-                .attr("class", `grid`)
-                .call(make_y_gridlines()
-                  .tickSize(-width)
+            // // add the X gridlines
+            g.append("g")
+              .attr("class", `grid`)
+              .attr("transform", "translate(0," + height + ")")
+              .call(make_x_grid_lines()
+                  .tickSize(-height)
                   .tickFormat(""))
+           // add the Y gridlines
+            g.append("g")
+            .attr("class", `grid`)
+            .call(make_y_gridlines()
+              .tickSize(-width)
+              .tickFormat(""))
 
-                  //plot the x axis
-                g.append("g")
-                    .attr("class", `axis axis--x`)
-                    .attr("transform", "translate(0," + height + ")")
-                    .call(d3.axisBottom(x));
+              //plot the x axis
+            g.append("g")
+                .attr("class", `axis axis--x`)
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
 
-                g.append("g")
-                    .attr("class", 'axis axis--y')
-                    .call(d3.axisLeft(y))
-                //plot the color legend
-                .append("text")
-                    .attr("fill", "#000")
-                    .attr("transform", "rotate(-90)")
-                    .attr("y", 6)
-                    .attr("dy", "0.71em")
-                    .style("text-anchor", "end")
-                    .style('font-size','12')
-                    .text("New Users");
-                g.append('g')
-                    .attr('class', 'legend')
-                .append('text')
-                    .attr('y',-10)
-                    .attr('x',width-100)
-                    .text('Users');
-                g.append('g')
-                    .append('rect')
-                    .attr('y',-23)
-                    .attr('x',width-55)
-                    .attr('width',18)
-                    .attr('height',18)
-                    .attr('fill','steelblue');
+            g.append("g")
+                .attr("class", 'axis axis--y')
+                .call(d3.axisLeft(y))
+            //plot the color legend
+            .append("text")
+                .attr("fill", "#000")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", "0.71em")
+                .style("text-anchor", "end")
+                .style('font-size','12')
+                .text("New Users");
+            g.append('g')
+                .attr('class', 'legend')
+            .append('text')
+                .attr('y',-10)
+                .attr('x',width-100)
+                .text('Users');
+            g.append('g')
+                .append('rect')
+                .attr('y',-23)
+                .attr('x',width-55)
+                .attr('width',18)
+                .attr('height',18)
+                .attr('fill','steelblue');
 
-            //plot the x axis legend
-                svg.append("text")
-                    .attr("transform","translate(" + (width/2) + " ," + (height + margin.top + 40) + ")")
-                    .style("text-anchor", "middle")
-                    .text("Week #");
+        //plot the x axis legend
+            svg.append("text")
+                .attr("transform","translate(" + (width/2) + " ," + (height + margin.top + 40) + ")")
+                .style("text-anchor", "middle")
+                .text("Week #");
 
-                g.append("path")
-                    .datum(data)
-                    .attr("class", `lineUsers`)
-                    .attr("d", lineCount)
+            g.append("path")
+                .datum(data)
+                .attr("class", `lineUsers`)
+                .attr("d", lineCount)
 
     }
 
