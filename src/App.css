@@ -1,6 +1,9 @@
 .axis--x path {
-  display: none;
+  /*display: none;*/
 }
+
+
+/*.axis */
 
 .line {
   fill: none;
@@ -9,7 +12,7 @@
 }
 
 
-.lineOrders {
+.lineUsers {
     fill: none;
     /*shape-rendering: crispEdges;*/
     stroke: steelblue;

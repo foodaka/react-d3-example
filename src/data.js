@@ -6,7 +6,7 @@ module.exports = [
     },
     {
         "week": 2,
-        "users": 117,
+        "users": 40,
         "orders": 77
     },
     {
@@ -21,17 +21,17 @@ module.exports = [
     },
     {
         "week": 5,
-        "users": 155,
+        "users": 50,
         "orders": 28
     },
     {
         "week": 6,
-        "users": 99,
+        "users": 40,
         "orders": 30
     },
     {
         "week": 7,
-        "users": 51,
+        "users": 120,
         "orders": 23
     },
     {
@@ -51,7 +51,7 @@ module.exports = [
     },
     {
         "week": 11,
-        "users": 184,
+        "users": 140,
         "orders": 52
     },
     {
@@ -66,27 +66,27 @@ module.exports = [
     },
     {
         "week": 14,
-        "users": 1,
+        "users": 70,
         "orders": 1
     },
     {
         "week": 15,
-        "users": 1,
+        "users": 90,
         "orders": 1
     },
     {
         "week": 16,
-        "users": 1,
+        "users": 100,
         "orders": 1
     },
     {
         "week": 17,
-        "users": 83,
+        "users": 150,
         "orders": 3
     },
     {
         "week": 18,
-        "users": 89,
+        "users": 220,
         "orders": 2
     }
 ]
