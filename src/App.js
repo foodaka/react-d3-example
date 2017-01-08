@@ -3,9 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import * as d3 from 'd3';
 import data from './data'
-import styles from './App.css'
-import classNames from 'classnames/bind';
-let cx = classNames.bind(styles);
+// import styles from './App.css'
 
 class d3Chart extends React.Component{
     constructor(props){
@@ -69,7 +67,7 @@ class d3Chart extends React.Component{
                     .call(d3.axisBottom(x));
 
                 g.append("g")
-                    .attr("class", `${cx('axis axis--y')}`)
+                    .attr("class", 'axis axis--y')
                     .call(d3.axisLeft(y))
                 //plot the color legend
                 .append("text")
@@ -78,6 +76,7 @@ class d3Chart extends React.Component{
                     .attr("y", 6)
                     .attr("dy", "0.71em")
                     .style("text-anchor", "end")
+                    .style('font-size','12')
                     .text("New Users");
                 g.append('g')
                     .attr('class', 'legend')
